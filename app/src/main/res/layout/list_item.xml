@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RestaurantsList">
+
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+            android:background="#E4C7BB">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:orientation="horizontal">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageResto"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/no_waste"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/restaurant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="resto"
+                    android:textColor="@color/black"
+                    android:textSize="26sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="test"/>
+
+            </LinearLayout>
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:layout_alignParentRight="true">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/colaborer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:backgroundTint="#E4C7BB"
+                    android:contentDescription="colaborate"
+                    android:minWidth="48dp"
+                    app:srcCompat="@android:drawable/ic_input_add" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/annulcolab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:backgroundTint="#E4C7BB"
+                    android:contentDescription="cancel colaboration"
+                    android:minWidth="48dp"
+                    app:srcCompat="@android:drawable/ic_delete" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/signaler"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:contentDescription="report restaurant"
+                    android:layout_marginRight="15dp"
+                    android:backgroundTint="#E4C7BB"
+                    android:minWidth="48dp"
+                    app:srcCompat="@android:drawable/ic_dialog_alert" />
+
+            </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

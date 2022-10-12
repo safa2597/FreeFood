@@ -6,13 +6,147 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/food_waste"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:shadowColor="@android:color/darker_gray"
+        android:text="Welcome "
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:shadowColor="@android:color/darker_gray"
+        android:text="To"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.918" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:shadowColor="@android:color/darker_gray"
+        android:text="FreeFood"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@android:color/holo_orange_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.296" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:layout_editor_absoluteX="2dp">
+
+        <TextView
+            android:id="@+id/Nom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="cursive"
+            android:gravity="center"
+            android:paddingTop="10mm"
+            android:text="ID"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#4E2C07"
+            android:textSize="28sp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/idUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="insert your ID"
+            android:paddingBottom="5mm" />
+
+        <TextView
+            android:id="@+id/passwordLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="cursive"
+            android:gravity="center"
+            android:text="Password"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#4E2C07"
+            android:textSize="28sp" />
+
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="********"
+            android:inputType="textPassword"
+            android:paddingBottom="5mm" />
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="25mm"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:backgroundTint="#4E2C07"
+            android:fontFamily="cursive"
+            android:text="Log In"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:textSize="34sp"
+            app:icon="@android:drawable/ic_media_play"
+            app:iconTint="#FFFFFF" />
+
+        <Button
+            android:id="@+id/subscribeButton"
+            android:layout_width="152dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/holo_orange_dark"
+            android:fontFamily="cursive"
+            android:paddingLeft="2dp"
+            android:text="Subscribe"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textSize="21sp"
+            app:icon="@android:drawable/ic_input_add"
+            app:iconTint="#FFFFFF" />
+
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
