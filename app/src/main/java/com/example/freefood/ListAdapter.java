@@ -4,39 +4,64 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.freefood.entity.User;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class ListAdapter extends ArrayAdapter<Restaurant> {
+public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> {
 
-    public ListAdapter(Context context, ArrayList<Restaurant> restoArrayList){
-
-        super(context,R.layout.list_item,restoArrayList);
+    ArrayList<Integer> u1;
+    ArrayList<String> u2,u3;
+    Context context;
+    public ListAdapter(Context ctx,ArrayList<Integer> u1, ArrayList<String> u2,ArrayList<String> u3){
+        this.context=ctx;
+        this.u1=u1;
+        this.u2=u2;
+        this.u3=u3;
     }
-
     @NonNull
     @Override
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        Restaurant resto=getItem(position);
-        if(convertView == null){
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item,parent,false);
-        }
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        ImageView imageView = convertView.findViewById(R.id.imageResto);
-        TextView nomResto = convertView.findViewById(R.id.restaurant);
-        TextView description = convertView.findViewById(R.id.description);
-
-        imageView.setImageResource(resto.imageId);
-        nomResto.setText(resto.nom);
-        description.setText(resto.description);
-
-
-        return super.getView(position,convertView,parent);
+        LayoutInflater inflater = LayoutInflater.from(context);
+        View view = inflater.inflate(R.layout.single_item,parent,false);
+        return new MyViewHolder(view);
     }
+
+    @Override
+    public void onBindViewHolder(@NonNull ListAdapter.MyViewHolder holder, int position) {
+
+        holder.image.setImageResource(u1.get(position));
+        holder.nom.setText(u2.get(position));
+        holder.description.setText(u3.get(position));
+    }
+
+    @Override
+    public int getItemCount() {
+        return u1.size();
+    }
+
+    public class MyViewHolder extends RecyclerView.ViewHolder{
+
+        ImageView image;
+        TextView description;
+        TextView nom;
+        public MyViewHolder(@NonNull View itemView) {
+            super(itemView);
+
+            image = itemView.findViewById(R.id.image);
+            description = itemView.findViewById(R.id.description);
+            nom = itemView.findViewById(R.id.name);
+        }
+    }
+
+
+
 }
