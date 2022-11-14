@@ -1,0 +1,43 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="general"
+        app:iconSpaceReserved="false">
+
+        <ListPreference
+            app:iconSpaceReserved="false"
+            app:key="theme"
+            app:title="theme"
+            app:entries="@array/theme_entries"
+            app:entryValues="@array/theme_values"
+            app:defaultValue="light_mode"
+            app:useSimpleSummaryProvider="true"/>
+
+        <ListPreference
+            app:iconSpaceReserved="false"
+
+            app:defaultValue="en"
+            app:entries="@array/language_entries"
+            app:entryValues="@array/language_values"
+            app:key="language"
+            app:title="language"
+            app:useSimpleSummaryProvider="true"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:title="security">
+
+        <ListPreference
+            app:iconSpaceReserved="false"
+            app:key="fingerprint"
+            app:title="fingerprint"
+            app:entries="@array/fingerprint_entries"
+            app:entryValues="@array/fingerprint_values"
+            app:defaultValue="off"
+            app:useSimpleSummaryProvider="true"/>
+
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
