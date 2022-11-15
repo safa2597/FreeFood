@@ -12,23 +12,16 @@
         android:alpha="0.5"
         android:background="@drawable/famine" />
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/image"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/no_waste"
-        android:layout_marginTop="20dp"/>
 
     <TextView
-        android:id="@+id/scode_profile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/nomdetail"
+        android:layout_width="match_parent"
+        android:layout_height="30mm"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/image"
         android:layout_marginTop="10dp"
+        android:textAlignment="center"
         android:textColor="@color/black"
-        android:text="" />
+        android:textSize="30sp" />
 
     <RelativeLayout
         android:id="@+id/relative_name"
@@ -37,30 +30,8 @@
         android:clickable="true"
         android:focusable="true"
         android:background="?attr/selectableItemBackground"
-        android:layout_below="@+id/scode_profile"
+        android:layout_below="@+id/nomdetail"
         android:paddingVertical="10dp">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginStart="70dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Name"
-                android:textSize="12sp"/>
-
-            <TextView
-                android:id="@+id/name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="resto1"
-                android:textSize="26sp"
-                android:textColor="@color/black"/>
-
-        </LinearLayout>
 
     </RelativeLayout>
 
@@ -75,22 +46,21 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginStart="70dp">
+            android:layout_marginStart="70dp"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Phone"
-                android:textSize="12sp"/>
+                android:textSize="12sp" />
 
             <TextView
-                android:id="@+id/phone"
+                android:id="@+id/contactdetail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="12345678"
-                android:textSize="26sp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textSize="26sp" />
 
         </LinearLayout>
 
@@ -117,10 +87,9 @@
                 android:textSize="12sp"/>
 
             <TextView
-                android:id="@+id/email"
+                android:id="@+id/emaildetail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="resto1@gmail.com"
                 android:textSize="26sp"
                 android:textColor="@color/black"/>
 
@@ -136,11 +105,6 @@
 
 
 
-    <View
-        android:layout_below="@+id/relative_name"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/black"/>
     <View
         android:layout_below="@+id/relative_mail"
         android:layout_width="match_parent"
@@ -171,22 +135,21 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginStart="70dp">
+            android:layout_marginStart="70dp"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Location"
-                android:textSize="12sp"/>
+                android:textSize="12sp" />
 
             <TextView
-                android:id="@+id/location"
+                android:id="@+id/adressedetail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tunis"
-                android:textSize="26sp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textSize="26sp" />
 
         </LinearLayout>
     </RelativeLayout>
@@ -204,22 +167,21 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginStart="70dp">
+            android:layout_marginStart="70dp"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Description"
-                android:textSize="12sp"/>
+                android:textSize="12sp" />
 
             <TextView
-                android:id="@+id/description"
+                android:id="@+id/descriptiondetail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="blabla"
-                android:textSize="26sp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textSize="26sp" />
 
         </LinearLayout>
     </RelativeLayout>

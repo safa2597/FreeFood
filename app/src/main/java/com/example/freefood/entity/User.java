@@ -24,13 +24,14 @@ public String adresse;
 @ColumnInfo(name="type")
 public Type type;
 
-    public User(String nom, String password, String contact, String email, String description, String adresse) {
+    public User(String nom, String password, String contact, String email, String description, String adresse,Type type) {
         this.nom = nom;
         this.password = password;
         this.contact = contact;
         this.email = email;
         this.description = description;
         this.adresse = adresse;
+        this.type=type;
     }
 
     public int getUid() {
