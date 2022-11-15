@@ -16,13 +16,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> {
-
-    ArrayList<Integer> u1;
     ArrayList<String> u2,u3;
     Context context;
-    public ListAdapter(Context ctx,ArrayList<Integer> u1, ArrayList<String> u2,ArrayList<String> u3){
+    public ListAdapter(Context ctx, ArrayList<String> u2,ArrayList<String> u3){
         this.context=ctx;
-        this.u1=u1;
         this.u2=u2;
         this.u3=u3;
     }
@@ -38,27 +35,24 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull ListAdapter.MyViewHolder holder, int position) {
 
-        holder.image.setImageResource(u1.get(position));
         holder.nom.setText(u2.get(position));
         holder.description.setText(u3.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return u1.size();
+        return u2.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
 
-        ImageView image;
         TextView description;
         TextView nom;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            image = itemView.findViewById(R.id.image);
             description = itemView.findViewById(R.id.description);
-            nom = itemView.findViewById(R.id.name);
+            nom = itemView.findViewById(R.id.restaurant);
         }
     }
 

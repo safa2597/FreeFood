@@ -9,8 +9,6 @@ import androidx.room.PrimaryKey;
 public class User {
 @PrimaryKey(autoGenerate = true)
 public int uid;
-@ColumnInfo
-public int image;
 @ColumnInfo(name="name")
 public String nom;
 @ColumnInfo(name="password")
@@ -26,7 +24,7 @@ public String adresse;
 @ColumnInfo(name="type")
 public Type type;
 
-    public User( String nom, String password, String contact, String email, String description, String adresse) {
+    public User(String nom, String password, String contact, String email, String description, String adresse) {
         this.nom = nom;
         this.password = password;
         this.contact = contact;
@@ -99,7 +97,4 @@ public Type type;
         type = type;
     }
 
-    public int getImage() {return image; }
-
-    public void setImage(int image) { this.image = image; }
 }
