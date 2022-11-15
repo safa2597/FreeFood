@@ -22,18 +22,16 @@ public class RestoDetail extends AppCompatActivity {
         if (intent != null) {
 
             String name = intent.getStringExtra("name");
-            int phone = intent.getIntExtra("contact", 12345678);
+            String phone = intent.getStringExtra("contact");
             String email = intent.getStringExtra("email");
-            String country = intent.getStringExtra("location");
+            String country = intent.getStringExtra("adresse");
             String description = intent.getStringExtra("description");
-            int imageid = intent.getIntExtra("imageid", R.drawable.no_waste);
 
-            binding.name.setText(name);
-            binding.phone.setText(phone);
-            binding.email.setText(email);
-            binding.location.setText(country);
-            binding.description.setText(description);
-            binding.image.setImageResource(imageid);
+            binding.nomdetail.setText(name);
+            binding.contactdetail.setText(phone);
+            binding.emaildetail.setText(email);
+            binding.adressedetail.setText(country);
+            binding.descriptiondetail.setText(description);
         }
     }
 }

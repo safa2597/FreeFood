@@ -16,7 +16,9 @@ public interface UserDAO {
     void insertOne(User user);
     @Delete
     void delete(User user);
-    @Query("SELECT * FROM user_table")
-    List<User> getAll();
+    @Query("SELECT * FROM user_table WHERE type='RESTAURANT'")
+    List<User> getAllRestaurants();
+    @Query("SELECT * FROM user_table WHERE type='ASSOCIATION'")
+    List<User> getAllAssociations();
 
 }
