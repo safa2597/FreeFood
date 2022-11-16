@@ -44,13 +44,17 @@
 
                 </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="18dp"
+                android:layout_marginRight="19dp"
                 android:orientation="horizontal"
                 android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:layout_alignParentRight="true">
+                android:paddingBottom="20dp">
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/colaborer"
@@ -74,13 +78,13 @@
                     android:id="@+id/signaler"
                     android:layout_width="wrap_content"
                     android:layout_height="48dp"
-                    android:contentDescription="report restaurant"
                     android:layout_marginRight="15dp"
                     android:backgroundTint="#E4C7BB"
+                    android:contentDescription="report restaurant"
                     android:minWidth="48dp"
                     app:srcCompat="@android:drawable/ic_dialog_alert" />
 
             </LinearLayout>
 
-    </RelativeLayout>
+        </RelativeLayout>
 </LinearLayout>

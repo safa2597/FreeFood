@@ -40,11 +40,12 @@ public class Restaurants extends Fragment {
         View v = inflater.inflate(R.layout.fragment_restaurants, container, false);
         rv= v.findViewById(R.id.recyclerview);
         users=new ArrayList();
-        users.add(new User("safa","safa","20504143","safa","test1","tunis",RESTAURANT));
-        users.add(new User("ameni","ameni","23635245","ameni","test2","ariana",RESTAURANT));
+        //users.add(new User("safa","safa","20504143","safa","test1","tunis",RESTAURANT));
+        //users.add(new User("ameni","ameni","23635245","ameni","test2","ariana",RESTAURANT));
         //loadData(users);
         db = Room.databaseBuilder(v.getContext().getApplicationContext(),
                 AppDataBase.class, "room_test_db").allowMainThreadQueries().build();
+        users=db.userDao().getAllRestaurants();
         ListAdapter adapter = new ListAdapter(v.getContext(),users);
         rv.setAdapter(adapter);
         rv.setLayoutManager(new LinearLayoutManager(v.getContext()));

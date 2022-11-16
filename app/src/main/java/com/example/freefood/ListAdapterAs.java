@@ -19,11 +19,11 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> {
+public class ListAdapterAs extends RecyclerView.Adapter<ListAdapterAs.MyViewHolder> {
     List<User> users;
     Context context;
     private AppDataBase database;
-    public ListAdapter(Context ctx,List<User> users){
+    public ListAdapterAs(Context ctx,List<User> users){
         this.context=ctx;
         this.users=users;
     }
@@ -37,18 +37,18 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> 
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ListAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ListAdapterAs.MyViewHolder holder, int position) {
         Intent intent = new Intent(context,RestoDetail.class);
-            holder.nom.setText(users.get(position).nom);
-            holder.description.setText(users.get(position).description);
-            holder.nom.setOnClickListener(e -> {
-                intent.putExtra("name", users.get(position).nom);
-                intent.putExtra("description", users.get(position).description);
-                intent.putExtra("adresse", users.get(position).adresse);
-                intent.putExtra("email", users.get(position).email);
-                intent.putExtra("contact", users.get(position).contact);
-                context.startActivity(intent);
-            });
+        holder.nom.setText(users.get(position).nom);
+        holder.description.setText(users.get(position).description);
+        holder.nom.setOnClickListener(e -> {
+            intent.putExtra("name", users.get(position).nom);
+            intent.putExtra("description", users.get(position).description);
+            intent.putExtra("adresse", users.get(position).adresse);
+            intent.putExtra("email", users.get(position).email);
+            intent.putExtra("contact", users.get(position).contact);
+            context.startActivity(intent);
+        });
 
     }
 
