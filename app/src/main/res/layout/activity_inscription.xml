@@ -20,7 +20,6 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="cursive"
         android:shadowColor="@android:color/darker_gray"
         android:text="FreeFood"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
@@ -56,13 +55,12 @@
                     android:layout_width="20mm"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:fontFamily="cursive"
                     android:gravity="center"
                     android:paddingTop="5mm"
                     android:text="Nom"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     android:textColor="#4E2C07"
-                    android:textSize="28sp" />
+                    android:textSize="26sp" />
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/idUser"
@@ -84,7 +82,6 @@
                     android:layout_width="20mm"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:fontFamily="cursive"
                     android:gravity="center"
                     android:paddingTop="5mm"
                     android:text="Password"
@@ -122,12 +119,11 @@
                     android:layout_width="20mm"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:fontFamily="cursive"
                     android:gravity="center"
                     android:text="Telephone"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     android:textColor="#4E2C07"
-                    android:textSize="28sp" />
+                    android:textSize="26sp" />
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/num"
@@ -149,12 +145,11 @@
                     android:layout_width="20mm"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:fontFamily="cursive"
                     android:gravity="center"
                     android:text="Confirm Password"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     android:textColor="#4E2C07"
-                    android:textSize="28sp" />
+                    android:textSize="26sp" />
 
                 <EditText
                     android:id="@+id/ConfPass"
@@ -186,12 +181,11 @@
                     android:layout_width="20mm"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:fontFamily="cursive"
                     android:gravity="center"
                     android:text="Email"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     android:textColor="#4E2C07"
-                    android:textSize="28sp" />
+                    android:textSize="26sp" />
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/mail"
@@ -213,12 +207,11 @@
                     android:layout_width="20mm"
                     android:layout_height="1dp"
                     android:layout_weight="1"
-                    android:fontFamily="cursive"
                     android:gravity="center"
                     android:text="Adresse"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     android:textColor="#4E2C07"
-                    android:textSize="28sp" />
+                    android:textSize="26sp" />
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/adresse"
@@ -250,12 +243,11 @@
                     android:layout_width="20mm"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:fontFamily="cursive"
                     android:gravity="center"
                     android:text="Statut"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     android:textColor="#4E2C07"
-                    android:textSize="28sp" />
+                    android:textSize="26sp" />
 
                 <RadioGroup
                     android:layout_width="match_parent"
@@ -292,7 +284,6 @@
             android:layout_height="10mm"
             android:layout_weight="1"
             android:ems="10"
-            android:fontFamily="cursive"
             android:gravity="left"
             android:inputType="text"
             android:paddingLeft="3mm"
@@ -307,11 +298,10 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:backgroundTint="@android:color/holo_orange_dark"
-            android:fontFamily="cursive"
             android:paddingLeft="2dp"
             android:text="Subscribe"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:textSize="21sp"
+            android:textSize="20sp"
             app:icon="@android:drawable/ic_input_add"
             app:iconTint="#FFFFFF" />
     </LinearLayout>
